@@ -4,8 +4,9 @@
   <li>{{concert.setlist}}</li>
   <li>{{concert.date}}</li>
   <li>{{concert.venue}}</li>
-
-  {{concert.ratings}}
+  {{#each ratings as |rating|}}
+    <li>{{rating.comment}}</li>
+  {{/each}}
 </ul>
 
 <h3>Rate this concert</h3>
