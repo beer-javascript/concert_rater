@@ -15,6 +15,19 @@ export default Ember.Component.extend({
       };
       var concert = this.currentConcert;
       this.sendAction('addRating', params, concert);
+    },
+    delete(concert){
+      if (confirm('Are you sure you want to delete this concert?')) {
+        this.sendAction('destroyConcert', concert);
+      }
     }
+    // delete(rating) {
+    //   if (confirm('Are you sure you want to delete this rating?')) {
+    //     this.sendAction('destroyRating', rating);
+    //   }
+    // },
+    // destroyRating(rating) {
+    //   this.sendAction('destroyRating', rating);
+    // }
   }
 });
