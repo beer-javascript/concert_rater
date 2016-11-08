@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('concert', params.concert);
+    return this.store.findRecord('concert', params.concert_id);
 },
   actions: {
     addRating(params, concert) {
@@ -14,6 +14,7 @@ export default Ember.Route.extend({
       this.transitionTo('concert');
   },
     update(concert, params) {
+      console.log(concert);
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined) {
           concert.set(key,params[key]);
