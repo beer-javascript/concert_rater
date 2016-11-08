@@ -38,6 +38,7 @@ export default Ember.Route.extend({
     },
     destroyRating(rating) {
       rating.destroyRecord();
+      this.transitionTo('index')
     }
   }
 });
