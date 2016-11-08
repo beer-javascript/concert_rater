@@ -5,13 +5,16 @@
   <li>{{concert.setlist}}</li>
   <li>{{concert.date}}</li>
   <li>{{concert.venue}}</li>
+  <button {{action 'delete' concert}} >Delete Concert</button>
   <hr>
+
   <h2>Comments</h2>
   {{#each concert.ratings as |rating|}}
-    <li>{{rating.comment}}</li>
+    <li>{{rating.comment}} <button {{action 'delete' rating}}>Delete Rating</button></li>
   {{/each}}
+
 </ul>
-<button {{action 'delete' concert}} >Delete</button>
+
 
 <h3>Rate this concert</h3>
   <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 1 concert}}></span>
@@ -28,5 +31,3 @@
 <label for="comment">Comment</label>
 {{input value=comment id="comment"}}
 <button class='btn' {{action "addRating"}}>Add Comment</button>
-
-<button {{action 'delete' rating}}>Delete Rating</button>

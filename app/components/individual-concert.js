@@ -21,14 +21,14 @@ export default Ember.Component.extend({
       if (confirm('Are you sure you want to delete this concert?')) {
         this.sendAction('destroyConcert', concert);
       }
+    },
+    delete(rating) {
+      if (confirm('Are you sure you want to delete this rating?')) {
+        this.sendAction('destroyRating', rating);
+      }
     }
-    // delete(rating) {
-    //   if (confirm('Are you sure you want to delete this rating?')) {
-    //     this.sendAction('destroyRating', rating);
-    //   }
-    // },
-    // destroyRating(rating) {
-    //   this.sendAction('destroyRating', rating);
-    // }
+    destroyRating(rating) {
+      this.sendAction('destroyRating', rating);
+    }
   }
 });

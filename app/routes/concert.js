@@ -28,8 +28,16 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     destroyConcert(concert) {
-      concert.destroyRecord();
+      var rating_deletions = concert.get('ratings').map(function(review) {
+        return rating.destroyRecord();
+      });
+      Ember.RSVP.all(rating_deletions).then(function() {
+        return concert.destroyRecord();
+      });
       this.transitionTo('index');
+    },
+    destroyRating(rating) {
+      rating.destroyRecord();
     }
   }
 });
