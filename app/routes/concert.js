@@ -12,6 +12,15 @@ export default Ember.Route.extend({
         return concert.save();
       });
       this.transitionTo('concert');
+  },
+    update(concert, params) {
+      Object.keys(params).forEach(function(key){
+        if(params[key]!==undefined) {
+          concert.set(key,params[key]);
+        }
+      });
+      concert.save();
+      this.transitionTo('index');
     }
   }
 });
