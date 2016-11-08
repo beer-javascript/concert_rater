@@ -8,7 +8,7 @@
   <hr>
   <h2>Comments</h2>
   {{#each concert.ratings as |rating|}}
-    <li>{{rating.comment}}</li>
+    <li>{{rating.comment}} score: {{starRating rating.score}}</li>
   {{/each}}
 </ul>
 

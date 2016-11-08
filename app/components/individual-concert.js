@@ -14,7 +14,6 @@ export default Ember.Component.extend({
         comment: this.get('comment')
       };
       var concert = this.currentConcert;
-      // console.log(concert.get('artist'));
       this.sendAction('addRating', params, concert);
     }
   }
