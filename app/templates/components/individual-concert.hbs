@@ -10,7 +10,10 @@
 
   <h2>Comments</h2>
   {{#each concert.ratings as |rating|}}
+
     <li>{{rating.comment}} <button {{action 'delete' rating}}>Delete Rating</button></li>
+    <li>{{rating.comment}} score: {{starRating rating.score}}</li>
+
   {{/each}}
 
 </ul>

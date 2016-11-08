@@ -9,13 +9,15 @@ export default Ember.Route.extend({
   },
   actions: {
     addRating(params, concert) {
-      // console.log(concert.get('artist'));
+      var allRatings = this.store.findAll('rating').length;
       var newRating = this.store.createRecord('rating', params);
       concert.get('ratings').addObject(newRating);
       newRating.save().then(function() {
         return concert.save();
       });
       this.transitionTo('concert');
+      // console.log(concert.id);
+      console.log(allRatings.length);
   },
     update(concert, params) {
       console.log(concert);
