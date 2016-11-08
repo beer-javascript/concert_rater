@@ -16,6 +16,13 @@ module.exports = function(environment) {
         Date: false
       }
     },
+  firebase: {
+  apiKey: "AIzaSyBthnzxWBL-mK2bsjE7oPR4K38TpKdPkjc",
+  authDomain: "concert-rater.firebaseapp.com",
+  databaseURL: "https://concert-rater.firebaseio.com",
+  storageBucket: "concert-rater.appspot.com",
+  messagingSenderId: "201202582542"
+},
 
     APP: {
       // Here you can pass flags/options to your application instance
