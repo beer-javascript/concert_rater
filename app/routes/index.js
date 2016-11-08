@@ -6,5 +6,12 @@ export default Ember.Route.extend({
     concerts: this.store.findAll('concert'),
     // ratings: this.store.findAll('rating'),
     });
-  }
+  },
+  actions: {
+    saveConcert(params) {
+      var newConcert = this.store.createRecord('concert', params);
+      newConcert.save();
+      this.transitionTo('index');
+    }
+  },
 });
