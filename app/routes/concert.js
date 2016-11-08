@@ -2,10 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('concert', params.concert_id);
-},
+    return Ember.RSVP.hash({
+      concert: this.store.findRecord('concert', params.concert_id),
+      ratings: this.store.findAll('rating')
+    });
+  },
   actions: {
     addRating(params, concert) {
+      // console.log(concert.get('artist'));
       var newRating = this.store.createRecord('rating', params);
       concert.get('ratings').addObject(newRating);
       newRating.save().then(function() {

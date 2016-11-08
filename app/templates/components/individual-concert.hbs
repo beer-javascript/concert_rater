@@ -1,11 +1,15 @@
-<ul>
+<h2>Info</h2>
+  <ul>
   <li>{{concert.artist}}</li>
   <li>{{concert.opener}}</li>
   <li>{{concert.setlist}}</li>
   <li>{{concert.date}}</li>
   <li>{{concert.venue}}</li>
-
-  {{concert.rating.comment}}
+  <hr>
+  <h2>Comments</h2>
+  {{#each concert.ratings as |rating|}}
+    <li>{{rating.comment}}</li>
+  {{/each}}
 </ul>
 <button {{action 'delete' concert}} >Delete</button>
 
