@@ -59,6 +59,6 @@ You will need the following things properly installed on your computer.
 
 ## Legal
 
-* Licensed under the GNU General Public License v3.0*
+Licensed under the GNU General Public License v3.0*
 
 Copyright (c) 2016 Copyright All Rights Reserved.
