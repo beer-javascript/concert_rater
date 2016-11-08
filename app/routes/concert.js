@@ -28,6 +28,10 @@ export default Ember.Route.extend({
       });
       concert.save();
       this.transitionTo('index');
+    },
+    destroyConcert(concert) {
+      concert.destroyRecord();
+      this.transitionTo('index');
     }
   }
 });

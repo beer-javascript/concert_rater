@@ -11,6 +11,7 @@
     <li>{{rating.comment}} score: {{starRating rating.score}}</li>
   {{/each}}
 </ul>
+<button {{action 'delete' concert}} >Delete</button>
 
 <h3>Rate this concert</h3>
   <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 1 concert}}></span>
@@ -27,3 +28,5 @@
 <label for="comment">Comment</label>
 {{input value=comment id="comment"}}
 <button class='btn' {{action "addRating"}}>Add Comment</button>
+
+<button {{action 'delete' rating}}>Delete Rating</button>
