@@ -1,0 +1,38 @@
+Concert Rating app
+
+Shelby: Figure out layout/style
+	basics: home page that lists all of the concerts with their date, you can click each individual concert to go to a more detailed page about them.
+	-consider placement of add form, update form, rating system, images 
+	
+
+Vanessa: Functionality
+	add ability to update concert information
+	add ability to delete concerts
+	figure out how to upload images (new model with has many? in array?)
+
+Ryan:
+	set up ratings system back-end
+
+Halle:
+?
+
+
+To Do Required:
+-add ratings system
+-README
+-update/delete concerts 
+-attach single images through URLs (at least)
+-general page layout 
+-how to/about page
+
+To Do Optional:
+-figure out set-list system
+-add images
+-upload multiple images
+-integrate spotify API
+-login system
+-admin page
+
+Notes: 
+-please do not put any html in routes, only in components. Routes are exclusively for passing actions and data
+-Always work on a branch. When you have information to push: commit and push your branch, go to master, merge the branch to master, push master, tell your that you just updated master and recommend that they pull ASAP
