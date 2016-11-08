@@ -10,12 +10,16 @@ export default Ember.Component.extend({
         date: this.get('date'),
         venue: this.get('venue'),
         ratingAverage: null
-      }; //add empty field checking?
-      this.sendAction('saveConcert', params);
-      this.set('artist','');
-      this.set('opener','');
-      this.set('date','');
-      this.set('venue','');
+      };
+      if (!params.artist || !params.opener || !params.date || !params.venue) {
+        alert('please fill all fields');
+      } else {
+        this.sendAction('saveConcert', params);
+        this.set('artist','');
+        this.set('opener','');
+        this.set('date','');
+        this.set('venue','');
+      }
     }
   }
 });

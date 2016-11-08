@@ -30,7 +30,7 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     destroyConcert(concert) {
-      var rating_deletions = concert.get('ratings').map(function(review) {
+      var rating_deletions = concert.get('ratings').map(function(rating) {
         return rating.destroyRecord();
       });
       Ember.RSVP.all(rating_deletions).then(function() {
@@ -40,7 +40,7 @@ export default Ember.Route.extend({
     },
     destroyRating(rating) {
       rating.destroyRecord();
-      this.transitionTo('index')
+      this.transitionTo('concert');
     }
   }
 });

@@ -14,14 +14,20 @@ export default Ember.Component.extend({
         comment: this.get('comment')
       };
       var concert = this.currentConcert;
-      this.sendAction('addRating', params, concert);
+      if (!params.score || !params.comment) {
+        alert('please leave both score and a comment');
+      } else {
+        this.sendAction('addRating', params, concert);
+        this.set('currentRating', null);
+        console.log(params.score);
+      }
     },
-    delete(concert){
+    destroyConcert(concert){
       if (confirm('Are you sure you want to delete this concert?')) {
         this.sendAction('destroyConcert', concert);
       }
     },
-    delete(rating) {
+    destroyRating(rating) {
       if (confirm('Are you sure you want to delete this rating?')) {
         this.sendAction('destroyRating', rating);
       }

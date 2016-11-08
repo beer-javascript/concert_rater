@@ -13,8 +13,12 @@ export default Ember.Component.extend({
        date: this.get('date'),
        venue: this.get('venue'),
      };
+     if (!params.artist || !params.opener || !params.date || !params.venue) {
+        alert('please fill all fields');
+    } else {
      this.set('updateConcertForm', false);
      this.sendAction('update', concert, params);
-   }
- }
+      }
+    }
+  }
 });
