@@ -5,3 +5,19 @@
   <li>{{concert.date}}</li>
   <li>{{concert.venue}}</li>
 </ul>
+
+<h3>Rate this concert</h3>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 1 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 2 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 3 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 4 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 5 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 6 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 7 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 8 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 9 concert}}></span>
+  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 10 concert}}></span>
+
+<label for="comment">Comment</label>
+{{input value=comment id="comment"}}
+<button class='btn' {{action "addRating"}}>Add Comment</button>

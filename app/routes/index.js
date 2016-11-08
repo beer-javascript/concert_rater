@@ -12,6 +12,14 @@ export default Ember.Route.extend({
       var newConcert = this.store.createRecord('concert', params);
       newConcert.save();
       this.transitionTo('index');
-    }
-  },
+    },
+    addAnswer(question, params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+      return question.save();
+  });
+  this.transitionTo('index');
+  }
+}
 });

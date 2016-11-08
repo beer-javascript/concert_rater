@@ -11,12 +11,11 @@ export default Ember.Component.extend({
         venue: this.get('venue'),
         ratingAverage: null
       }; //add empty field checking?
-      console.log(1)
       this.sendAction('saveConcert', params);
-      this.set('artist',''),
-      this.set('opener',''),
-      this.set('date',''),
-      this.set('venue','')
+      this.set('artist','');
+      this.set('opener','');
+      this.set('date','');
+      this.set('venue','');
     }
   }
 });
