@@ -1,10 +1,6 @@
 {{#each concerts as |concert|}}
   <ul>
-    <li>{{concert.artist}}</li>
-    <li>{{concert.opener}}</li>
-    <li>{{concert.setlist}}</li>
-    <li>{{concert.date}}</li>
-    <li>{{concert.venue}}</li>
+    {{#link-to 'concert' concert.id}}<li>{{concert.artist}}</li>{{/link-to}}
   </ul>
   <hr>
 {{/each}}
