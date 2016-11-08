@@ -1,1 +1,10 @@
-{{yield}}
+{{#each concerts as |concert|}}
+  <ul>
+    <li>{{concert.artist}}</li>
+    <li>{{concert.opener}}</li>
+    <li>{{concert.setlist}}</li>
+    <li>{{concert.date}}</li>
+    <li>{{concert.venue}}</li>
+  </ul>
+  <hr>
+{{/each}}
