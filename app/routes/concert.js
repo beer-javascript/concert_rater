@@ -6,6 +6,7 @@ export default Ember.Route.extend({
 },
   actions: {
     addRating(params, concert) {
+      // console.log(concert.get('artist'));
       var newRating = this.store.createRecord('rating', params);
       concert.get('ratings').addObject(newRating);
       newRating.save().then(function() {
