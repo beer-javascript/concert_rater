@@ -2,6 +2,15 @@
   color: blue;
 }
 
+a {
+  color: #FFF;
+}
+
+.navButtons {
+  background-color: rgba(110, 110, 110, 0.5);
+  margin-right: 30px;
+}
+
 body {
   text-align: center;
   background: -moz-linear-gradient(top, #f9f9f9 6%, #595959 12%, #666666 25%, #474747 33%, #2c2c2c 43%, #131313 100%); /* FF3.6-15 */

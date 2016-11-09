@@ -2,12 +2,19 @@
   <h1 class="logo">RisingRiffs</h1>
 </header>
 
-<div class="navbar navbar-inverse">
+<div class="row">
+  <div class="navbar navbar-inverse col-xs-12">
+    <br>
+    <button class="btn navButtons">{{#link-to 'index'}}HOME{{/link-to}}</button>
+    <button class="btn navButtons">{{#link-to 'about'}}ABOUT{{/link-to}}</button>
+    <br>
+    <br>
+  </div>
 </div>
+
 {{outlet}}
 <br>
 <footer>
-
   <hr>
   <br>
   <br>
