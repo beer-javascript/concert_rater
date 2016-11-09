@@ -1,15 +1,18 @@
-
-  {{#each concerts as |concert|}}
-    <div class="boxed">
-      {{#link-to 'concert' concert.id}}<h2>{{concert.artist}}</h2>{{/link-to}}
-    </div>
-  {{/each}}
-
+{{#each concerts as |concert|}}
+  <div class="boxed">
+    {{#link-to 'concert' concert.id}}
+    <h2>{{concert.artist}}</h2>
+    <hr>
+    <h5>{{concert.date}}</h5>
+    <h5>{{concert.venue}}</h5>
+    {{/link-to}}
+  </div>
+{{/each}}
 <br>
 <br>
-
 <div class="boxed">
   <form>
+    <h2>Add an Event</h2>
     <div class="form-group">
       <label for="artist">Artist</label>
       {{input class="form-control" value=artist id="artist"}}
@@ -26,7 +29,7 @@
       <label for="venue">Opener</label>
       {{input class="form-control" value=venue id="venue"}}
     </div>
-    <button class='btn' {{action "saveConcert"}}>Add Concert</button>
+    <button class='btn btn-xs' {{action "saveConcert"}}>Add Concert</button>
   </form>
 
 </div>
