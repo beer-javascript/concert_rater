@@ -1,36 +1,43 @@
-<h2>Info</h2>
-  <ul>
-  <li>{{concert.artist}}</li>
-  <li>{{concert.opener}}</li>
-  <li>{{concert.setlist}}</li>
-  <li>{{concert.date}}</li>
-  <li>{{concert.venue}}</li>
-  <button {{action 'destroyConcert' concert}} >Delete Concert</button>
-  <hr>
+<div class="boxed">
+  <h1>{{concert.artist}}</h1>
+  <h5>with {{concert.opener}}</h5>
+  <h5>The Set List: {{concert.setlist}}</h5>
+  <br>
+  <h5>{{concert.date}}</h5>
+  <h5>{{concert.venue}}</h5>
+  <button class="btn btn-xs" {{action 'destroyConcert' concert}} >Delete Concert</button>
+  {{update-concert concert=model.concert update="update"}}
 
-  <h2>Comments</h2>
-  {{#each concert.ratings as |rating|}}
+{{#each concert.ratings as |rating|}}
+  <div>
+    <hr>
+    <strong>{{rating.comment}}</strong>
+    <br>
+    {{starRating rating.score}}
+    <br>
+    <button class="btn btn-xs" {{action 'destroyRating' rating}}>Delete Rating</button>
+  </div>
+{{/each}}
+</div>
 
-    <li>{{rating.comment}} <button {{action 'destroyRating' rating}}>Delete Rating</button></li>
-    <li>{{rating.comment}} score: {{starRating rating.score}}</li>
+<div class="boxed">
+  <h3>Rate this concert</h3>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 1 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 2 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 3 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 4 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 5 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 6 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 7 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 8 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 9 concert}}></span>
+    <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 10 concert}}></span>
+  <br>
+  <br>
+  <label for="comment">Comment</label>
+  {{input value=comment id="comment"}}
+  <br>
+  <br>
+  <button class='btn btn-xs' {{action "addRating"}}>Add Comment</button>
 
-  {{/each}}
-
-</ul>
-
-
-<h3>Rate this concert</h3>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 1 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 2 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 3 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 4 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 5 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 6 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 7 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 8 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 9 concert}}></span>
-  <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 10 concert}}></span>
-
-<label for="comment">Comment</label>
-{{input value=comment id="comment"}}
-<button class='btn' {{action "addRating"}}>Add Comment</button>
+</div>
