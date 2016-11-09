@@ -33,6 +33,11 @@ footer {
   font-family: 'Damion', cursive;
 }
 
+#about-img {
+  border: 20px;
+  border-style: groove;
+}
+
 .well {
   background-color: rgba(110, 110, 110, 0.5);
   color: #000;
@@ -41,6 +46,12 @@ footer {
 
 .block-text {
   font-family: 'Shrikhand', cursive;
+}
+
+.about {
+  color: #E0E0E0;
+  padding-right: 400px;
+  padding-left: 400px;
 }
 
 .boxed {
