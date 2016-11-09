@@ -34,8 +34,8 @@
     <span class="glyphicon glyphicon-star-empty estar" {{action 'rateConcert' 10 concert}}></span>
   <br>
   <br>
-  <label for="comment">Comment</label>
-  {{input value=comment id="comment"}}
+  {{!-- <label for="comment">Comment</label> --}}
+  <textarea class="comment" rows="5" cols="80" id="TITLE">{{input value=comment id="comment"}}</textarea>
   <br>
   <br>
   <button class='btn btn-xs' {{action "addRating"}}>Add Comment</button>

@@ -27,13 +27,5 @@ export default Ember.Component.extend({
         this.sendAction('destroyConcert', concert);
       }
     },
-    destroyRating(rating) {
-      if (confirm('Are you sure you want to delete this rating?')) {
-        this.sendAction('destroyRating', rating);
-      }
-    },
-    destroyRating(rating) {
-      this.sendAction('destroyRating', rating);
-    }
   }
 });
