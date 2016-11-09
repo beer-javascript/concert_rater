@@ -1,13 +1,10 @@
-
-  {{#each concerts as |concert|}}
-    <div class="boxed">
-      {{#link-to 'concert' concert.id}}<h2>{{concert.artist}}</h2>{{/link-to}}
-    </div>
-  {{/each}}
-
+{{#each concerts as |concert|}}
+  <div class="boxed">
+    {{#link-to 'concert' concert.id}}<h2>{{concert.artist}}</h2>{{/link-to}}
+  </div>
+{{/each}}
 <br>
 <br>
-
 <div class="boxed">
   <form>
     <div class="form-group">
