@@ -1,5 +1,7 @@
 # Concert Rater
 
+![screenshot of project running](screenshot.jpg)
+
 by
 * [Shelby Clayton](https://github.com/Shabis)
 * [Ryan Loos](https://github.com/rloos289)
@@ -8,7 +10,6 @@ by
 
 The Concert Rater web app allows user to rate their concert experience. Users will complete a form that will inquire about the bands/artists names, opening performer, concert setlist, date venue, and overall experience rating. Users will also have the ability to upload images they have from the concert.
 
-![screenshot of project running](screenshot.jpg)
 
 ## Prerequisites
 
