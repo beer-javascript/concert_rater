@@ -6,7 +6,7 @@
   <h5>{{concert.date}}</h5>
   <h5>{{concert.venue}}</h5>
   <button class="btn btn-xs" {{action 'destroyConcert' concert}} >Delete Concert</button>
-  {{update-concert concert=model.concert update="update"}}
+  {{update-concert concert=concert update="update"}}
 
 {{#each concert.ratings as |rating|}}
   <div>
@@ -35,7 +35,8 @@
   <br>
   <br>
   {{!-- <label for="comment">Comment</label> --}}
-  <textarea class="comment" rows="5" cols="80" id="TITLE">{{input value=comment id="comment"}}</textarea>
+  <p>Comments:</p>
+  {{input value=comment id="comment"}}
   <br>
   <br>
   <button class='btn btn-xs' {{action "addRating"}}>Add Comment</button>
