@@ -32,6 +32,9 @@ export default Ember.Component.extend({
       if (confirm('Are you sure you want to delete this rating?')) {
         this.sendAction('destroyRating', rating);
       }
-    }
+    },
+    update(concert, params) {
+      this.sendAction('update', concert, params);
+    },
   }
 });
